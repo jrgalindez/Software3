@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta name="description" content="Web Personal">  <!--Informacion necesaria para el buscador-->
+        <meta name="keywords" content="template">
+        <title>Plantilla HTML CSS</title>
+        <link rel="stylesheet" href="estilos/styles.css"/>
+        <script src="script/index.js"></script>  
+    </head>
+    <body>
+        <header id="cabecera">  <!--Cabecera de la pagina de pagina-->
+            <br>
+            <br>
+            <h1>Sobre mi</h1>
+        </header>
+        <nav>  <!--Seccion de navegacion-->
+            <ul class="navegacionPrin">
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="estudios.html">Estudios</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <section id ="contenido">  <!--seccion de contenido de la pagina-->
+            <section id="contenidoPrin">
+                <section id ="imagen">
+                    <figure>
+                        <img id="Foto_personal" src="archivos/perfil.jpg" width="100%" height="100%"/>
+                    </figure>
+                </section>
+                <article id="articulo1">
+                    <header id="titulo">
+                        <h3>Introduccion</h3>
+
+                    </header>
+                    <p>
+                        Hola soy José Ricardo Galíndez, Ingeniero en Automatica Industrial y estudiante de Ingenieria de Sistemas 
+                        de la Universidad del Cauca, tengo 38 años, nací en la hermosa ciudad de Popayán en la cual vivo en la actualidad.
+                    </p>
+
+                    <p> Mucha gente me pregunta por que actualmente estudio sistemas, y es por una simple razón, amo la programacion
+                        desde pequeño siempre me llamo la atención la inteligencia artificiar, la robotica, pero a medida que fui creciendo
+                        comprendi que el mundo tenía muchas más areas interesantes de estudio de las que pensaba, por lo que siempre intento estar
+                        aprendiendo nuevas cosas por fuera y por dentro de mi area.
+
+                    </p>
+                    <p>
+                        Finalmente las ciencias y las Ingenierias son lo que más se ha acercado a mis sueños y a mis deseos
+                        por lo que siempre quiero reguir aprendiendo y aportando a la sociedad y a la academia desde mis capacidades,
+                        espero que más adelante mi conocimiento ayude a la gente y sea un motor de mejora del mundo.
+                    </p>
+                    <br>
+                    <p>
+                        <button id="disminuir">Disminuir</button>
+                        <button id="aumentar">Aumentar</button>
+                    </p>
+                    <script>
+                        var classes = ["fuente0", "fuente1", "fuente2", "fuente3", "fuente4"];
+                        var classIndex = 2;
+                        document.getElementById('aumentar').addEventListener('click', function() {
+                            let previousClass = classIndex;
+                            classIndex++;
+                            classIndex = (classIndex == classes.length) ? classes.length - 1 : classIndex;
+                            changeClass(previousClass, classIndex);
+                        });
+                        document.getElementById('disminuir').addEventListener('click', function () {
+                            let previousClass = classIndex;
+                            classIndex--;
+                            classIndex = (classIndex < 0) ? 0 : classIndex;
+                            changeClass(previousClass, classIndex);
+                        });                        
+                      </script>
+
+                </article>
+            </section>
+        </section>
+        <footer id="piePrin"> <!--Pie de pagina-->
+            <h3>Copyright ® 2022</h3>
+            <h3>Universidad del Cauca</h3>
+            
+            <a href="#"><img src="archivos/face.webp" width="100" height="50"></a>
+
+        </footer>
+    </body>
+</html>
